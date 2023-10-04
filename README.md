@@ -45,6 +45,7 @@ _TBD_
 
 ## TO-DOs
 
+- **boto3 Resource support** in addition to the client methods.
 - Perform some **proper testing**.
 - Provide some **examples of use**, maybe a video demo.
 - Handle **pagination** for large numbers of resources -- this is a big one, AWS API limits are a Thing.

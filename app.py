@@ -21,14 +21,14 @@ while not output_sent:
     output_mode_answer = inquirer.prompt(output_mode_question)
 
     method_input_answer = inquirer.text(
-        message="Enter boto3 client or resource method i.e. boto3.client('s3')"
+        message="Enter your resource's boto3 client method i.e. boto3.client('s3')"
     )
 
     method_code = compile(method_input_answer, "<string>", "eval")
 
     try:
         boto3_resource_method = eval(method_code)
-        print(f"boto3 client or resource method successfully registered!")
+        print(f"boto3 client method successfully registered!")
     except Exception as error:
         print("An exception occurred: ", error)
         print("Returning to output location selection...")
@@ -37,7 +37,7 @@ while not output_sent:
     try:
         # resource list method setup
         resource_listing_answer = inquirer.text(
-            message="Enter resource listing method for your client or resource method i.e. list_buckets()"
+            message="Enter resource listing method for your client method i.e. list_buckets()"
         )
 
         try:
