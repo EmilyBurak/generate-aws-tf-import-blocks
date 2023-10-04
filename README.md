@@ -30,9 +30,9 @@ _NOTE: I've barely tested this and only on a small subset of resources, with sma
 - Run `python3 app.py`
 
 **Docker Use**
-**TBD**
+_TBD_
 
-**App Use**
+**Overall App Use**
 
 - Enter the requested inputs to generate the configuration code, **preferably with boto3 docs on hand** if you're not familiar with the methods involved and the resultant dictionary to be parsed for your id.
 - Use the generated file with `terraform plan -generate-config-out` to ease importing bulk resources.
@@ -49,7 +49,6 @@ _NOTE: I've barely tested this and only on a small subset of resources, with sma
 - Provide some **examples of use**, maybe a video demo.
 - Handle **pagination** for large numbers of resources -- this is a big one, AWS API limits are a Thing.
 - Turn into a **full-fledged CLI app** by coding in AWS resources and their accompanying client or resource, listing method and keys. **If I had the time.**
-- Fix some text wrapping issues with `inquirer` and tighten up its related code, i.e. refactor to `text = inquirer.text(message="Prompt here")`.
 - Implement **better error handling instead of just returning to the start of script**.
 
 ## Resources
