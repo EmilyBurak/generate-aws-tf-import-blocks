@@ -30,11 +30,12 @@ _NOTE: I've barely tested this and only on a small subset of resources, with sma
 - Run `python3 app.py`
 
 **Docker Use**
-_TBD_
+
+- With Docker set up on a system, run `docker run --name aws_tf_import_blocks -e AWS_ACCESS_KEY_ID="<ACCESS_KEY_ID>" -e AWS_SECRET_ACCESS_KEY="<SECRET_ACCESS_KEY>" -it eburak/aws_tf_import_blocks:v1-release`
 
 **Overall App Use**
 
-- Enter the requested inputs to generate the configuration code, **preferably with boto3 docs on hand** if you're not familiar with the methods involved and the resultant dictionary to be parsed for your id.
+- Enter the requested inputs to generate the configuration code, **preferably with boto3 docs on hand** to consult regarding the client and listing method if you're not familiar with the methods involved and the resultant dictionary to be parsed for your id.
 - Use the generated file with `terraform plan -generate-config-out` to ease importing bulk resources.
 
 ## Lessons Learned / Observations
